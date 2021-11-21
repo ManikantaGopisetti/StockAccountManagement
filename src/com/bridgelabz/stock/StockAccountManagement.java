@@ -7,9 +7,10 @@ public class StockAccountManagement {
 		System.out.println("----Welcome to stock account management program----");
 		Scanner sc = new Scanner(System.in);
 		StockManager sm = new StockManager();
+		Account accountTest = new Account();
 		while (true) {
 			System.out.println("Please enter your choice : " + "\n1.Add Stock" + "\n2.print stock report"
-					+ "\n3.Exit program");
+					+ "\n3.Credit amount"+"\n4.Debit amount"+"\n5.Exit program");
 			int choice = sc.nextInt();
 			
 			switch (choice) {
@@ -22,6 +23,14 @@ public class StockAccountManagement {
 				break;
 				
 			case 3:
+				accountTest.credit();
+				break;
+				
+			case 4:
+				accountTest.debit();
+				break;
+				
+			case 5:	
 				System.out.println("Exited from stock account management program");
 				sc.close();
 				return;

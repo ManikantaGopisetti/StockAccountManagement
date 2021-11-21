@@ -30,7 +30,6 @@ public class StockManager {
 			total_value += value;
 		}
 		StockList.setTotal_value(total_value);
-		sc.close();
 
 	}
 
