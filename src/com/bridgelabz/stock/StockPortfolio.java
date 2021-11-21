@@ -34,7 +34,7 @@ public class StockPortfolio {
 	@Override
 	public String toString() {
 		return "StockPortfolio [stock_name=" + stock_name + ", no_of_shares=" + no_of_shares + ", share_price="
-				+ share_price + ", total_value_shares=" + total_val_shares + "]";
+				+ share_price + ", total_value_of_shares=" + total_val_shares + "]";
 	}
 
 }
