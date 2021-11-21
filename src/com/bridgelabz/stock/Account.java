@@ -3,13 +3,10 @@ package com.bridgelabz.stock;
 import java.util.Scanner;
 
 public class Account {
-	int account_balance = 0;
-	Scanner sc = new Scanner(System.in);
+	static int account_balance = 0;
+	static Scanner sc = new Scanner(System.in);
 
-	public void debit() {
-
-		System.out.print("Enter amount to Withdraw: ");
-		int amount = sc.nextInt();
+	public static void debit(double amount) {
 		if (amount < account_balance) {
 			account_balance -= amount;
 			System.out.println(amount + "$" + " debited from your account \n" 
@@ -19,12 +16,21 @@ public class Account {
 		}
 	}
 
-	public void credit() {
-		System.out.print("Enter amount to deposit: ");
-		int amount = sc.nextInt();
-		account_balance += amount;
+	public static void credit(double amount) {
+				account_balance += amount;
 		System.out.println(amount + "$" + " credited to your account \n " 
 						+ "Remaining acount balance : " + account_balance + "$");
 
 	}
+
+	public static int getAccount_balance() {
+		return account_balance;
+	}
+
+	public static void setAccount_balance(int account_balance) {
+		Account.account_balance = account_balance;
+	}
+	
+	
+
 }
